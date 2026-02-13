@@ -4,27 +4,30 @@ import Link from "next/link";
 const posts = [
   {
     category: "IA Conversacional",
-    title: "Cómo los chatbots con IA reducen costos de soporte en un 40%",
+    title: "Cómo los chatbots con IA están transformando el servicio al cliente",
     excerpt:
-      "Un análisis de cómo las empresas latinoamericanas están adoptando IA conversacional para transformar su atención al cliente.",
+      "Empresas implementan chatbots con IA que comprenden contexto y responden de forma natural, reduciendo tiempos de espera y costos operativos significativamente.",
     readTime: "8 min",
-    date: "Feb 2026",
+    date: "Feb 2025",
+    url: "https://www.forbes.com/sites/bernardmarr/2024/01/22/the-amazing-ways-chatgpt-is-transforming-customer-service/",
   },
   {
     category: "Automatización",
-    title: "5 procesos que toda empresa debería automatizar con Python en 2026",
+    title: "Python para automatización: De tareas simples a flujos empresariales",
     excerpt:
-      "Desde la generación de reportes hasta el scraping de datos de mercado, descubre los flujos que generan mayor ROI.",
-    readTime: "6 min",
-    date: "Ene 2026",
+      "Guía completa sobre cómo Python se ha convertido en la herramienta preferida para automatizar procesos empresariales, desde web scraping hasta ETL de datos.",
+    readTime: "12 min",
+    date: "Ene 2025",
+    url: "https://realpython.com/python-automation/",
   },
   {
     category: "Cloud",
-    title: "Cloud Run vs. servidores tradicionales: una comparación de costos real",
+    title: "Serverless: La evolución de la arquitectura cloud moderna",
     excerpt:
-      "Analizamos caso por caso cuánto puede ahorrar su empresa migrando a una arquitectura serverless moderna.",
+      "Análisis profundo de cómo las arquitecturas serverless están permitiendo a las empresas escalar sin gestionar infraestructura, reduciendo costos hasta en un 70%.",
     readTime: "10 min",
-    date: "Ene 2026",
+    date: "Dic 2024",
+    url: "https://aws.amazon.com/serverless/",
   },
 ];
 
@@ -59,7 +62,9 @@ export function BlogSection() {
           {posts.map((post) => (
             <Link
               key={post.title}
-              href="#blog"
+              href={post.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex flex-col overflow-hidden rounded-2xl border border-border/50 bg-background transition-all hover:border-primary/30 hover:shadow-md"
             >
               <div className="h-1 w-full bg-gradient-to-r from-primary/60 to-primary/10" />

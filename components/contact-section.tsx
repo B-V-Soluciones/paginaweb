@@ -87,9 +87,14 @@ export function ContactSection() {
               >
                 Agendar Llamada
               </button>
-              <span className="font-medium text-primary-foreground/60">
+              <a
+                href="https://wa.me/message/SDRNTDKV43TOM1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-primary-foreground/60 transition-colors hover:text-primary-foreground underline"
+              >
                 o contáctenos vía WhatsApp
-              </span>
+              </a>
             </div>
           </div>
         </div>

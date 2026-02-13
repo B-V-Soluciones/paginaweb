@@ -12,7 +12,6 @@ const footerLinks = {
     { label: "Sobre Nosotros", href: "#" },
     { label: "Ejemplos", href: "#casos" },
     { label: "Blog Técnico", href: "#blog" },
-    { label: "Carreras", href: "#" },
   ],
 };
 
