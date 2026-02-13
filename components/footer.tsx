@@ -85,13 +85,13 @@ export function Footer() {
             {`© ${new Date().getFullYear()} B&V Soluciones. Todos los derechos reservados.`}
           </p>
           <div className="flex gap-8 text-xs text-muted-foreground">
-            <Link href="#" className="hover:text-primary">
+            <Link href="/terminos" className="hover:text-primary">
               Términos
             </Link>
-            <Link href="#" className="hover:text-primary">
+            <Link href="/privacidad" className="hover:text-primary">
               Privacidad
             </Link>
-            <Link href="#" className="hover:text-primary">
+            <Link href="/cookies" className="hover:text-primary">
               Cookies
             </Link>
           </div>

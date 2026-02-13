@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Code2, ExternalLink, Github } from "lucide-react";
+import { Code2, ExternalLink, Github, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const industries = ["Todos", "Web Apps", "Automatización", "Integraciones"];
@@ -194,13 +194,15 @@ export function CaseStudiesSection() {
           <p className="mb-4 text-sm text-muted-foreground">
             ¿Tienes un proyecto en mente?
           </p>
-          <Link
-            href="#contacto"
+          <button
+            onClick={() => {
+              document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
+            }}
             className="inline-flex items-center gap-2 rounded-2xl bg-primary px-8 py-4 font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:bg-primary/90"
           >
             Hablemos de tu proyecto
-            <Code2 className="h-4 w-4" />
-          </Link>
+            <ArrowRight className="h-4 w-4" />
+          </button>
         </div>
       </div>
     </section>
