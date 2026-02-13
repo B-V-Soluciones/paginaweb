@@ -9,16 +9,16 @@ const posts = [
       "Empresas implementan chatbots con IA que comprenden contexto y responden de forma natural, reduciendo tiempos de espera y costos operativos significativamente.",
     readTime: "8 min",
     date: "Feb 2025",
-    url: "https://www.forbes.com/sites/bernardmarr/2024/01/22/the-amazing-ways-chatgpt-is-transforming-customer-service/",
+    url: "https://www.vocalcom.com/es/blog/como-ia-chatbots-transforman-atencion-cliente/",
   },
   {
     category: "Automatización",
     title: "Python para automatización: De tareas simples a flujos empresariales",
     excerpt:
       "Guía completa sobre cómo Python se ha convertido en la herramienta preferida para automatizar procesos empresariales, desde web scraping hasta ETL de datos.",
-    readTime: "12 min",
+    readTime: "5 min",
     date: "Ene 2025",
-    url: "https://realpython.com/python-automation/",
+    url: "https://nuclio.school/blog/automatizar-tareas-con-python/",
   },
   {
     category: "Cloud",
@@ -27,7 +27,7 @@ const posts = [
       "Análisis profundo de cómo las arquitecturas serverless están permitiendo a las empresas escalar sin gestionar infraestructura, reduciendo costos hasta en un 70%.",
     readTime: "10 min",
     date: "Dic 2024",
-    url: "https://aws.amazon.com/serverless/",
+    url: "https://cloud.google.com/discover/what-is-serverless-architecture?hl=es",
   },
 ];
 
