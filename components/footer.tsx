@@ -10,7 +10,7 @@ const footerLinks = {
   ],
   Empresa: [
     { label: "Sobre Nosotros", href: "#" },
-    { label: "Casos de Éxito", href: "#casos" },
+    { label: "Ejemplos", href: "#casos" },
     { label: "Blog Técnico", href: "#blog" },
     { label: "Carreras", href: "#" },
   ],

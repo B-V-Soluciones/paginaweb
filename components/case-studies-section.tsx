@@ -1,60 +1,66 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, TrendingUp, Clock, DollarSign } from "lucide-react";
+import { Code2, ExternalLink, Github } from "lucide-react";
 import Link from "next/link";
 
-const industries = ["Todos", "Retail", "Finanzas", "Salud"];
+const industries = ["Todos", "Web Apps", "Automatización", "Integraciones"];
 
-const caseStudies = [
+const practicalExamples = [
   {
-    industry: "Retail",
-    company: "TechRetail S.A.",
-    situation:
-      "Cadena de retail con más de 200 tiendas enfrentaba tiempos de respuesta de +48h en atención al cliente.",
-    solution:
-      "Implementamos un chatbot con IA conversacional integrado a su CRM, capaz de resolver el 70% de las consultas sin intervención humana.",
-    results: [
-      { icon: TrendingUp, value: "40%", label: "Reducción en costos" },
-      { icon: Clock, value: "< 30s", label: "Tiempo de respuesta" },
-      { icon: DollarSign, value: "$180K", label: "Ahorro anual" },
+    industry: "Web Apps",
+    title: "Sistema de Gestión de Inventario",
+    description:
+      "MVP funcional desarrollado con Next.js 15, Prisma ORM y PostgreSQL para el control completo de stock y productos.",
+    features: [
+      "Dashboard en tiempo real con métricas de inventario",
+      "Gestión de productos, categorías y movimientos",
+      "Sistema de alertas por stock mínimo",
+      "Reportes y analytics de entrada/salida",
     ],
+    tech: ["Next.js 15", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
+    demoUrl: null, // Agregar cuando esté desplegado
+    githubUrl: null, // Opcional: si decides hacerlo público
   },
   {
-    industry: "Finanzas",
-    company: "FinaBank Corp.",
-    situation:
-      "Banco digital procesaba reportes regulatorios manualmente, invirtiendo +200 horas mensuales del equipo de compliance.",
-    solution:
-      "Automatizamos el pipeline completo de reportes regulatorios con Python, desde la extracción de datos hasta la generación del documento final.",
-    results: [
-      { icon: Clock, value: "120h", label: "Horas ahorradas/mes" },
-      { icon: TrendingUp, value: "99.8%", label: "Precisión en reportes" },
-      { icon: DollarSign, value: "$250K", label: "Ahorro anual" },
+    industry: "Automatización",
+    title: "Bot de Scraping y Análisis de Datos",
+    description:
+      "Script Python que automatiza la extracción y procesamiento de datos de múltiples fuentes para análisis competitivo.",
+    features: [
+      "Extracción automatizada de datos web",
+      "Limpieza y normalización de información",
+      "Generación de reportes en Excel/PDF",
+      "Ejecución programada con cron jobs",
     ],
+    tech: ["Python", "BeautifulSoup", "Pandas", "Selenium", "Schedule"],
+    demoUrl: null,
+    githubUrl: null,
   },
   {
-    industry: "Salud",
-    company: "HealthPlus Network",
-    situation:
-      "Red de clínicas con sistema de citas que colapsaba en horas pico, causando hasta 30 minutos de espera.",
-    solution:
-      "Migramos su plataforma de agendamiento a Cloud Run con escalado automático, soportando 10x más tráfico sin degradación.",
-    results: [
-      { icon: TrendingUp, value: "10x", label: "Capacidad de tráfico" },
-      { icon: Clock, value: "99.9%", label: "Uptime garantizado" },
-      { icon: DollarSign, value: "50%", label: "Menos costos infra" },
+    industry: "Integraciones",
+    title: "API de Integración Multi-Plataforma",
+    description:
+      "Backend escalable que conecta diferentes servicios y herramientas empresariales en un solo punto de acceso.",
+    features: [
+      "Endpoints REST documentados con Swagger",
+      "Integración con servicios de terceros",
+      "Sistema de autenticación JWT",
+      "Rate limiting y caching inteligente",
     ],
+    tech: ["Node.js", "Express", "Redis", "JWT", "Docker"],
+    demoUrl: null,
+    githubUrl: null,
   },
 ];
 
 export function CaseStudiesSection() {
   const [activeFilter, setActiveFilter] = useState("Todos");
 
-  const filteredCases =
+  const filteredExamples =
     activeFilter === "Todos"
-      ? caseStudies
-      : caseStudies.filter((c) => c.industry === activeFilter);
+      ? practicalExamples
+      : practicalExamples.filter((ex) => ex.industry === activeFilter);
 
   return (
     <section id="casos" className="bg-background py-24">
@@ -62,11 +68,14 @@ export function CaseStudiesSection() {
         {/* Header */}
         <div className="mb-12 text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            Casos de Éxito
+            Portafolio
           </p>
           <h2 className="font-heading text-balance text-3xl font-bold text-foreground sm:text-4xl md:text-5xl">
-            Resultados que hablan por sí solos
+            Ejemplos prácticos de nuestro trabajo
           </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+            Proyectos reales que demuestran nuestras capacidades técnicas y enfoque en soluciones escalables.
+          </p>
         </div>
 
         {/* Filters */}
@@ -88,69 +97,93 @@ export function CaseStudiesSection() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 gap-8">
-          {filteredCases.map((study) => (
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          {filteredExamples.map((example) => (
             <div
-              key={study.company}
-              className="overflow-hidden rounded-2xl border border-border bg-background transition-all hover:border-primary/20"
+              key={example.title}
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-background transition-all hover:border-primary/30 hover:shadow-lg"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-5">
-                {/* Left */}
-                <div className="flex flex-col justify-between p-8 lg:col-span-3">
-                  <div>
-                    <div className="mb-4 flex items-center gap-3">
-                      <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-                        {study.industry}
+              {/* Header con categoría */}
+              <div className="border-b border-border bg-secondary/30 px-6 py-4">
+                <div className="flex items-center justify-between">
+                  <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                    {example.industry}
+                  </span>
+                  <Code2 className="h-5 w-5 text-primary/60" />
+                </div>
+              </div>
+
+              {/* Contenido */}
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="mb-3 font-heading text-xl font-bold text-foreground">
+                  {example.title}
+                </h3>
+                <p className="mb-4 text-sm text-muted-foreground">
+                  {example.description}
+                </p>
+
+                {/* Features */}
+                <div className="mb-4 space-y-2">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+                    Características
+                  </p>
+                  <ul className="space-y-1.5">
+                    {example.features.map((feature, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-start gap-2 text-sm text-foreground/80"
+                      >
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Tech Stack */}
+                <div className="mb-4 mt-auto">
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    Tecnologías
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {example.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-lg border border-border bg-secondary px-2.5 py-1 text-xs font-medium text-foreground/70"
+                      >
+                        {tech}
                       </span>
-                      <span className="font-heading text-sm font-semibold text-foreground">
-                        {study.company}
-                      </span>
-                    </div>
-                    <div className="flex flex-col gap-4">
-                      <div>
-                        <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                          Situación
-                        </p>
-                        <p className="text-sm leading-relaxed text-foreground/80">
-                          {study.situation}
-                        </p>
-                      </div>
-                      <div>
-                        <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-primary">
-                          Solución
-                        </p>
-                        <p className="text-sm leading-relaxed text-foreground/90">
-                          {study.solution}
-                        </p>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
 
-                {/* Right results */}
-                <div className="flex flex-col justify-center gap-6 border-t border-border bg-secondary/50 p-8 lg:col-span-2 lg:border-t-0 lg:border-l">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-primary">
-                    Resultados
-                  </p>
-                  {study.results.map((result) => (
-                    <div
-                      key={result.label}
-                      className="flex items-center gap-4"
-                    >
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                        <result.icon className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <p className="font-heading text-2xl font-bold text-foreground">
-                          {result.value}
-                        </p>
-                        <p className="text-xs text-muted-foreground">
-                          {result.label}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                {/* Links */}
+                {(example.demoUrl || example.githubUrl) && (
+                  <div className="flex gap-3 border-t border-border pt-4">
+                    {example.demoUrl && (
+                      <Link
+                        href={example.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors hover:text-primary/80"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        Ver Demo
+                      </Link>
+                    )}
+                    {example.githubUrl && (
+                      <Link
+                        href={example.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                      >
+                        <Github className="h-4 w-4" />
+                        Código
+                      </Link>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -158,12 +191,15 @@ export function CaseStudiesSection() {
 
         {/* CTA */}
         <div className="mt-12 text-center">
+          <p className="mb-4 text-sm text-muted-foreground">
+            ¿Tienes un proyecto en mente?
+          </p>
           <Link
             href="#contacto"
             className="inline-flex items-center gap-2 rounded-2xl bg-primary px-8 py-4 font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:bg-primary/90"
           >
-            Quiero resultados similares
-            <ArrowRight className="h-4 w-4" />
+            Hablemos de tu proyecto
+            <Code2 className="h-4 w-4" />
           </Link>
         </div>
       </div>

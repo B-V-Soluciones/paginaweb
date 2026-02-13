@@ -43,7 +43,7 @@ export function HeroSection() {
             href="#casos"
             className="w-full rounded-2xl border border-border bg-background px-8 py-4 font-bold text-foreground transition-all hover:bg-secondary sm:w-auto"
           >
-            Ver Casos de Éxito
+            Ver Ejemplos
           </Link>
         </div>
 

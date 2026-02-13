@@ -96,7 +96,7 @@ export function Navbar() {
             href="#casos"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
           >
-            Casos de Éxito
+            Ejemplos
           </Link>
         </div>
 
@@ -169,7 +169,7 @@ export function Navbar() {
               className="rounded-xl px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
               onClick={() => setMobileOpen(false)}
             >
-              Casos de Éxito
+              Ejemplos
             </Link>
 
             <div className="mt-3 border-t border-border pt-4">
