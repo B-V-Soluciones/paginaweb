@@ -61,7 +61,7 @@ export default function ProyectoIntegracionAPIPage() {
       description: "Uptime del sistema",
     },
     {
-      metric: "20h/semana",
+      metric: "20h/sem",
       description: "Ahorro en gestión de datos",
     },
   ];
@@ -260,24 +260,6 @@ export default function ProyectoIntegracionAPIPage() {
               ))}
             </div>
 
-            <div className="mt-8 rounded-lg border border-primary/20 bg-primary/5 p-6">
-              <h3 className="mb-2 flex items-center gap-2 font-semibold">
-                <Github className="h-4 w-4" />
-                Código Open Source
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Publicamos un template open-source de integración API en nuestro{" "}
-                <a
-                  href="https://github.com/B-V-Soluciones"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline"
-                >
-                  GitHub
-                </a>
-                {" "}que puedes usar como base para tus propias integraciones.
-              </p>
-            </div>
           </div>
         </div>
       </section>

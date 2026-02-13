@@ -205,14 +205,6 @@ export default function CloudRunPage() {
               </div>
             ))}
           </div>
-
-          <div className="mt-8 rounded-lg border border-primary/20 bg-primary/5 p-6">
-            <h3 className="mb-2 font-semibold">💡 Ejemplo de Ahorro Real</h3>
-            <p className="text-sm text-muted-foreground">
-              Un cliente con tráfico variable (picos en horario laboral) pasó de pagar $300/mes por un 
-              servidor VPS a $35/mes con Cloud Run. Ahorro: 88% manteniendo la misma funcionalidad.
-            </p>
-          </div>
         </div>
       </section>
 

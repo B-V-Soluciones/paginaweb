@@ -53,7 +53,7 @@ export default function ProyectoInventarioPage() {
       description: "Reducción de errores de inventario",
     },
     {
-      metric: "10h/semana",
+      metric: "10h/sem",
       description: "Ahorro de tiempo en gestión manual",
     },
     {
@@ -212,24 +212,7 @@ export default function ProyectoInventarioPage() {
             ))}
           </div>
 
-          <div className="mt-8 rounded-lg border border-primary/20 bg-primary/5 p-6">
-            <h3 className="mb-2 flex items-center gap-2 font-semibold">
-              <ExternalLink className="h-4 w-4" />
-              Código del Proyecto
-            </h3>
-            <p className="text-sm text-muted-foreground">
-              Este proyecto es privado del cliente, pero puedes ver un sistema similar open-source en nuestro{" "}
-              <a
-                href="https://github.com/B-V-Soluciones"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline"
-              >
-                GitHub
-              </a>
-              .
-            </p>
-          </div>
+        
         </div>
       </section>
 

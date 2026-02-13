@@ -49,7 +49,7 @@ export default function ProyectoBotReportesPage() {
 
   const results = [
     {
-      metric: "15h/semana",
+      metric: "15h/sem",
       description: "Ahorro de tiempo del equipo",
     },
     {
@@ -61,7 +61,7 @@ export default function ProyectoBotReportesPage() {
       description: "Precisión en cálculos",
     },
     {
-      metric: "$2,400/mes",
+      metric: "80%  ",
       description: "Ahorro en costos operativos",
     },
   ];
@@ -257,16 +257,6 @@ export default function ProyectoBotReportesPage() {
               ))}
             </div>
 
-            <div className="mt-8 rounded-lg border border-primary/20 bg-primary/5 p-6">
-              <h3 className="mb-2 flex items-center gap-2 font-semibold">
-                <ExternalLink className="h-4 w-4" />
-                ¿Hospedaje del Bot?
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                El bot se ejecuta en Google Cloud Run con GitHub Actions para scheduling. 
-                Costo mensual: ~$5 USD. Una fracción del costo de hacerlo manualmente.
-              </p>
-            </div>
           </div>
         </div>
       </section>
