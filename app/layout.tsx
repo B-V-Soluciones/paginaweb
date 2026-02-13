@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       "Transforma tu empresa con Inteligencia Artificial, automatización con Python y arquitectura Cloud Run. Reduce costos hasta 40% y escala sin límites.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.svg",
         width: 1200,
         height: 630,
         alt: "B&V Soluciones - Tecnología que impulsa resultados",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "B&V Soluciones | IA, Automatización y Cloud para tu Negocio",
     description:
       "Transforma tu empresa con IA, Python y Cloud Run. Reduce costos hasta 40% y escala sin límites.",
-    images: ["/twitter-image.jpg"],
+    images: ["/twitter-image.svg"],
     creator: "@byvsoluciones",
   },
   alternates: {

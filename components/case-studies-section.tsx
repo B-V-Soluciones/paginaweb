@@ -19,7 +19,7 @@ const practicalExamples = [
       "Reportes y analytics de entrada/salida",
     ],
     tech: ["Next.js 15", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
-    demoUrl: null, // Agregar cuando esté desplegado
+    detailUrl: "/proyectos/sistema-inventario-ferreteria",
     githubUrl: null, // Opcional: si decides hacerlo público
   },
   {
@@ -34,7 +34,7 @@ const practicalExamples = [
       "Ejecución programada con cron jobs",
     ],
     tech: ["Python", "BeautifulSoup", "Pandas", "Selenium", "Schedule"],
-    demoUrl: null,
+    detailUrl: "/proyectos/bot-automatizacion-reportes",
     githubUrl: null,
   },
   {
@@ -49,7 +49,7 @@ const practicalExamples = [
       "Rate limiting y caching inteligente",
     ],
     tech: ["Node.js", "Express", "Redis", "JWT", "Docker"],
-    demoUrl: null,
+    detailUrl: "/proyectos/integracion-api-crm-ecommerce",
     githubUrl: null,
   },
 ];
@@ -158,17 +158,15 @@ export function CaseStudiesSection() {
                 </div>
 
                 {/* Links */}
-                {(example.demoUrl || example.githubUrl) && (
+                {(example.detailUrl || example.githubUrl) && (
                   <div className="flex gap-3 border-t border-border pt-4">
-                    {example.demoUrl && (
+                    {example.detailUrl && (
                       <Link
-                        href={example.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href={example.detailUrl}
                         className="inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors hover:text-primary/80"
                       >
                         <ExternalLink className="h-4 w-4" />
-                        Ver Demo
+                        Ver más detalles
                       </Link>
                     )}
                     {example.githubUrl && (

@@ -4,12 +4,27 @@ Sitio web corporativo de B&V Soluciones, agencia B2B de tecnología especializad
 
 ## 🚀 Tecnologías
 
-- **Framework**: Next.js 16 con App Router
+- **Framework**: Next.js 16 con App Router + Turbopack
 - **UI**: React 19 + TypeScript
 - **Estilos**: Tailwind CSS + shadcn/ui
-- **Base de datos**: Supabase
-- **Email**: Resend
-- **Hosting**: Vercel (recomendado)
+- **Base de datos**: Supabase (PostgreSQL)
+- **Email**: Resend API
+- **Analytics**: Vercel Analytics
+- **Hosting**: Vercel
+
+## ✨ Características
+
+- 🎨 Diseño moderno y responsive
+- 📱 Optimizado para móviles
+- 🔍 SEO completo (metadata, sitemap, robots.txt, Schema.org)
+- 📧 Formulario de contacto funcional con Supabase + Resend
+- 📰 Newsletter con captura de leads
+- 📄 Páginas legales (términos, privacidad, cookies)
+- 🎯 Páginas de servicios individuales (Chatbots IA, Automatización Python, Cloud Run)
+- 💼 Portfolio con proyectos detallados
+- 🌐 404 personalizada
+- 🖼️ Imágenes OpenGraph para compartir en redes sociales
+- 📊 Analytics de Vercel integrado
 
 ## 🏃 Desarrollo Local
 
@@ -38,9 +53,18 @@ RESEND_API_KEY=tu_resend_api_key
 
 # Email de destino
 CONTACT_EMAIL=tu@email.com
+
+# URL del sitio
+NEXT_PUBLIC_SITE_URL=https://www.byvsoluciones.dev
 ```
 
-4. **Iniciar servidor de desarrollo**
+4. **Configurar base de datos**
+
+Ejecuta los scripts SQL en tu proyecto de Supabase:
+- `supabase-setup-contacts.sql` - Tabla de contactos
+- `supabase-setup-newsletter.sql` - Tabla de newsletter
+
+5. **Iniciar servidor de desarrollo**
 ```bash
 npm run dev
 ```
@@ -97,18 +121,49 @@ El proyecto es compatible con cualquier plataforma que soporte Next.js (Netlify,
 
 ```
 .
-├── app/                    # App Router de Next.js
-│   ├── api/               # API Routes
-│   ├── layout.tsx         # Layout principal
-│   ├── page.tsx           # Página de inicio
-│   └── globals.css        # Estilos globales
-├── components/            # Componentes React
-│   ├── ui/               # Componentes de shadcn/ui
-│   └── *.tsx             # Secciones de la página
-├── lib/                   # Utilidades y configuración
-│   ├── supabase.ts       # Cliente de Supabase
-│   └── utils.ts          # Helpers
-└── public/               # Archivos estáticos
+├── app/                      # App Router de Next.js
+│   ├── api/                 # API Routes
+│   │   ├── contact/        # Endpoint de contacto
+│   │   └── newsletter/     # Endpoint de newsletter
+│   ├── servicios/          # Páginas de servicios individuales
+│   │   ├── chatbots-ia/
+│   │   ├── automatizacion-python/
+│   │   └── cloud-run/
+│   ├── proyectos/          # Portfolio detallado
+│   │   ├── sistema-inventario-ferreteria/
+│   │   ├── bot-automatizacion-reportes/
+│   │   └── integracion-api-crm-ecommerce/
+│   ├── terminos/           # Términos y condiciones
+│   ├── privacidad/         # Política de privacidad
+│   ├── cookies/            # Política de cookies
+│   ├── icon.tsx            # Favicon generator
+│   ├── not-found.tsx       # Página 404 personalizada
+│   ├── sitemap.ts          # Sitemap dinámico
+│   ├── robots.ts           # Robots.txt
+│   ├── manifest.ts         # Web manifest
+│   ├── layout.tsx          # Layout principal
+│   ├── page.tsx            # Página de inicio
+│   └── globals.css         # Estilos globales
+├── components/             # Componentes React
+│   ├── ui/                # Componentes de shadcn/ui
+│   ├── hero-section.tsx
+│   ├── solutions-section.tsx
+│   ├── case-studies-section.tsx
+│   ├── blog-section.tsx
+│   ├── newsletter-section.tsx
+│   ├── contact-section.tsx
+│   ├── footer.tsx
+│   ├── navbar.tsx
+│   └── structured-data.tsx  # Schema.org JSON-LD
+├── lib/                    # Utilidades y configuración
+│   ├── supabase.ts        # Cliente de Supabase
+│   └── utils.ts           # Helpers
+├── public/                # Archivos estáticos
+│   ├── og-image.svg       # OpenGraph image
+│   ├── twitter-image.svg  # Twitter card image
+│   └── favicon.svg        # Favicon
+├── supabase-setup-contacts.sql     # Setup DB contactos
+└── supabase-setup-newsletter.sql   # Setup DB newsletter
 ```
 
 ## 🔐 Seguridad

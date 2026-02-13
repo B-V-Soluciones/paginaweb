@@ -7,18 +7,21 @@ const services = [
     title: "Chatbots Inteligentes",
     description:
       "IA conversacional avanzada para soporte al cliente y ventas, reduciendo tiempos de respuesta en un 80%.",
+    url: "/servicios/chatbots-ia",
   },
   {
     icon: Code2,
     title: "Automatización Python",
     description:
       "Scripts personalizados y arquitectura backend robusta para automatizar procesos manuales y ETL de datos.",
+    url: "/servicios/automatizacion-python",
   },
   {
     icon: Cloud,
     title: "Arquitectura Cloud Run",
     description:
       "Infraestructura serverless escalable que optimiza el consumo de recursos y garantiza disponibilidad total.",
+    url: "/servicios/cloud-run",
   },
 ];
 
@@ -56,7 +59,7 @@ export function SolutionsSection() {
                 {service.description}
               </p>
               <Link
-                href="#contacto"
+                href={service.url}
                 className="inline-flex items-center gap-1 font-bold text-primary transition-colors hover:text-primary/80"
               >
                 Saber más
