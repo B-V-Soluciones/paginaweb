@@ -101,7 +101,7 @@ export default function CloudRunPage() {
             </Link>
           </div>
 
-          <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+          <h1 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Arquitectura Serverless con Cloud Run
           </h1>
           <p className="mb-8 text-xl text-muted-foreground">
