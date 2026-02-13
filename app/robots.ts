@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://www.byvsolucioes.com/sitemap.xml',
+    sitemap: 'https://www.byvsoluciones.dev/sitemap.xml',
   }
 }

@@ -5,8 +5,8 @@ export function StructuredData() {
     name: "B&V Soluciones",
     description:
       "Agencia B2B de tecnología especializada en IA, automatización con Python y arquitectura Cloud Run",
-    url: "https://www.byvsolucioes.com",
-    logo: "https://www.byvsolucioes.com/Logo.svg",
+    url: "https://www.byvsoluciones.dev",
+    logo: "https://www.byvsoluciones.dev/Logo.svg",
     foundingDate: "2024",
     address: {
       "@type": "PostalAddress",

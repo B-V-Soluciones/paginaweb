@@ -13,7 +13,7 @@ const _spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.byvsoluciones.tech/'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.byvsoluciones.dev/'),
   title: "B&V Soluciones | IA, Automatización y Cloud para tu Negocio",
   description:
     "B&V Soluciones: Lo hacemos fácil. Transforma tu empresa con Inteligencia Artificial, automatización con Python y arquitectura Cloud Run. Reduce costos y escala sin límites.",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: "https://www.byvsolucioes.com",
+    url: "https://www.byvsoluciones.dev",
     siteName: "B&V Soluciones",
     title: "B&V Soluciones | IA, Automatización y Cloud para tu Negocio",
     description:
@@ -56,10 +56,10 @@ export const metadata: Metadata = {
     description:
       "Transforma tu empresa con IA, Python y Cloud Run. Reduce costos hasta 40% y escala sin límites.",
     images: ["/twitter-image.jpg"],
-    creator: "@byvsolucioes",
+    creator: "@byvsoluciones",
   },
   alternates: {
-    canonical: "https://www.byvsolucioes.com",
+    canonical: "https://www.byvsoluciones.dev",
   },
   category: "technology",
 };
