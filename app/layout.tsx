@@ -2,6 +2,7 @@ import React from "react"
 import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { StructuredData } from "@/components/structured-data";
+import { Analytics } from "@vercel/analytics/react";
 
 import "./globals.css";
 
@@ -12,6 +13,7 @@ const _spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.byvsoluciones.tech/'),
   title: "B&V Soluciones | IA, Automatización y Cloud para tu Negocio",
   description:
     "B&V Soluciones: Lo hacemos fácil. Transforma tu empresa con Inteligencia Artificial, automatización con Python y arquitectura Cloud Run. Reduce costos y escala sin límites.",
@@ -78,7 +80,10 @@ export default function RootLayout({
       <head>
         <StructuredData />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
