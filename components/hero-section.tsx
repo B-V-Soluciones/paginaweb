@@ -5,7 +5,7 @@ export function HeroSection() {
   return (
     <section
       id="inicio"
-      className="relative overflow-hidden pt-40 pb-20 lg:pt-56 lg:pb-32"
+      className="relative overflow-hidden pt-40 pb-20 lg:pt-40 lg:pb-32"
     >
       {/* Subtle orange radial glow */}
       <div className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-primary/10 blur-[120px]" />
