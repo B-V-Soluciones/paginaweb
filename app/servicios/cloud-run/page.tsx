@@ -31,7 +31,7 @@ export default function CloudRunPage() {
       description: "ETL, análisis y transformación de datos con escalado automático según demanda.",
     },
     {
-      title: "Webhooks y Integraciones",
+      title: "Webhooks e Integraciones",
       description: "Recibe y procesa eventos de terceros: pagos, notificaciones, sincronizaciones.",
     },
     {
